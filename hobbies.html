@@ -5,238 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos de Moi - Mes Hobbies</title>
     <link rel="icon" type="image/png" href="img/PP2.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0a192f;
-            color: #dbe4f3;
-            line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .hero-header {
-            text-align: center;
-            padding: 6rem 0;
-            background: linear-gradient(145deg, rgba(10, 25, 47, 0.2), rgba(23, 42, 69, 0.5)), url('https://www.transparenttextures.com/patterns/stardust.png');
-            border-bottom: 1px solid #1d3b5f;
-        }
-
-        .hero-header .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #64ffda;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 10px 40px rgba(100, 255, 218, 0.15);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-header .profile-pic:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        .hero-header h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #e6f1ff;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
-
-        .hero-header .subtitle {
-            font-size: 1.2rem;
-            color: #8892b0;
-            font-weight: 300;
-        }
-
-        .hobby-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 4rem;
-            padding: 5rem 0;
-            border-bottom: 1px solid #1d3b5f;
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .hobby-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .hobby-section:nth-child(even) .hobby-image {
-            order: 2;
-        }
-
-        .hobby-image img {
-            width: 100%;
-            max-width: 400px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            transition: transform 0.4s ease;
-        }
-
-        .hobby-image img:hover {
-            transform: scale(1.03);
-        }
-
-        .hobby-content h2 {
-            font-size: 2.2rem;
-            color: #64ffda;
-            margin-bottom: 1rem;
-        }
-
-        .hobby-content p {
-            font-size: 1rem;
-            color: #8892b0;
-        }
-
-        /* Style pour les highlights */
-        .highlight {
-            background: rgba(100, 255, 218, 0.12);
-            color: #64ffda;
-            padding: 0.1rem 0.3rem;
-            border-radius: 4px;
-            font-weight: 500;
-            border: 1px solid rgba(100, 255, 218, 0.2);
-            transition: all 0.2s ease;
-            display: inline;
-            line-height: inherit;
-        }
-
-        .highlight:hover {
-            background: rgba(100, 255, 218, 0.18);
-            border-color: rgba(100, 255, 218, 0.3);
-        }
-
-        .back-link-container {
-            text-align: center;
-            padding-top: 4rem;
-        }
-
-        .back-link {
-            display: inline-block;
-            background: transparent;
-            color: #64ffda;
-            border: 1px solid #64ffda;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .back-link:hover {
-            background: rgba(100, 255, 218, 0.1);
-            transform: translateY(-3px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-            color: #8892b0;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            .hobby-section {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .hobby-section:nth-child(even) .hobby-image {
-                order: 0;
-            }
-            .hero-header h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero-header">
-        <img src="img/crazy_mita_PP_1.gif" alt="Photo de profil" class="profile-pic">
+    <header class="main-header">
+        <img src="img/crazy_mita_PP_1.gif" alt="À propos de moi" class="logo-img">
         <h1>À Propos de Moi</h1>
         <p class="subtitle">Mes passions, mes hobbies, mon univers.</p>
+        <a href="index.html" class="btn btn-secondary">Retour à l'accueil</a>
     </header>
 
-    <div class="container">
-        <main>
-            <section class="hobby-section">
-                <div class="hobby-image">
-                    <img src="img/miside.png" alt="Illustration du premier hobby">
-                </div>
-                <div class="hobby-content">
-                    <h2>Les jeux que j'aime</h2>
-                    <p>Ma sélection de jeux préférés comprend <span class="highlight">Miside</span>, <span class="highlight">DDLC</span>, <span class="highlight">Destiny 2</span> et <span class="highlight">Battlefield</span></p>
-                </div>
-            </section>
-
-            <section class="hobby-section">
-                <div class="hobby-image">
-                    <img src="img/HappySugarLife.png" alt="Illustration du deuxième hobby">
-                </div>
-                <div class="hobby-content">
-                    <h2>Les animés que j'aime</h2>
-                    <p>Mes animés favoris incluent <span class="highlight">Oshi no Ko</span>, <span class="highlight">Happy Sugar Life</span> et <span class="highlight">Whisper Me a Love Song</span>. J'apprécie surtout le Yuri, la romance, et les intrigues bien construites</p>
-                </div>
-            </section>
-
-            <section class="hobby-section">
-                <div class="hobby-image">
-                    <img src="img/IA.png" alt="aucune idée">
-                </div>
-                <div class="hobby-content">
-                    <h2>Mes passions</h2>
-                    <p>Mes centres d'intérêt incluent l'IA, l'acquisition de nouvelles connaissances, l'expérimentation créative et la découverte de nouvelles perspectives</p>
-                </div>
-            </section>
-
-            <div class="back-link-container">
-                <a href="index.html" class="back-link">Retour à l'accueil</a>
+    <main class="container fade-in">
+        <section class="hobby-section">
+            <div class="hobby-image">
+                <img src="img/miside2.png" alt="Illustration du premier hobby">
             </div>
-        </main>
-    </div>
+            <div class="hobby-content">
+                <h2>Les jeux que j'aime</h2>
+                <p>Ma sélection de jeux préférés comprend <span class="highlight">Miside</span>, <span class="highlight">DDLC</span>, <span class="highlight">Destiny 2</span> et <span class="highlight">Battlefield</span></p>
+            </div>
+        </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.hobby-section');
+        <section class="hobby-section">
+            <div class="hobby-image">
+                <img src="img/happysugarlife2.png" alt="Illustration du deuxième hobby">
+            </div>
+            <div class="hobby-content">
+                <h2>Les animés que j'aime</h2>
+                <p>Mes animés favoris incluent <span class="highlight">Oshi no Ko</span>, <span class="highlight">Happy Sugar Life</span> et <span class="highlight">Whisper Me a Love Song</span>. J'apprécie surtout le Yuri, la romance, et les intrigues bien construites</p>
+            </div>
+        </section>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
+        <section class="hobby-section">
+            <div class="hobby-image">
+                    <img src="img/IA.png" alt="Illustration conceptuelle de l'intelligence artificielle et des nouvelles idées">
+            </div>
+            <div class="hobby-content">
+                <h2>Mes passions</h2>
+                <p>Mes centres d'intérêt incluent l'IA, l'acquisition de nouvelles connaissances, l'expérimentation créative et la découverte de nouvelles perspectives</p>
+            </div>
+        </section>
+    </main>
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
+    <footer class="main-footer">
+        <p>&copy; 2025 PickAngE - Propulsé par l'innovation</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <a href="#" id="back-to-top-btn" class="back-to-top-btn" title="Retour en haut">&#8679;</a>
 </body>
 </html>
