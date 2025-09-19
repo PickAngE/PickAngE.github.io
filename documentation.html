@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Kernel Bot</title>
+    <link rel="icon" href="image/img-1.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Complete documentation for Kernel Bot commands and features">
+    <meta name="keywords" content="Kernel Bot documentation, Discord bot commands, bot setup guide">
+</head>
+<body>
+    <header>
+        <img src="image/img-1.png" alt="Kernel Bot Profile Picture" class="profile-picture">
+        <h1>Kernel Bot Documentation</h1>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2> Command Documentation</h2>
+            <p>Welcome to the complete Kernel Bot documentation. Here you will find detailed information about all available commands, organized by category for easy navigation.</p>
+            
+            <div style="background: rgba(100, 181, 246, 0.1); border: 1px solid rgba(100, 181, 246, 0.3); border-radius: 8px; padding: 1rem; margin: 1.5rem 0;">
+                <h3 style="color: #64b5f6; margin: 0 0 0.5rem 0;">Quick Start</h3>
+                <p style="margin: 0; font-size: 0.95rem;">All commands use Discord's slash command system. Simply type <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; color: #81c4ff;">/</code> followed by the command name to get started.</p>
+            </div>
+        </section>
+
+        <section id="commands">
+            <div class="category-section">
+                <h3 class="category-title">Support Commands</h3>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>Ticket System</h3>
+                        <p>Creates a comprehensive support ticket system that allows users to get private help from staff members. This system includes automatic archiving and role management.</p>
+                        <div class="command-usage">
+                            <pre><code>/ticket setup #category @support_role #archive_channel @mention_support</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(76, 175, 80, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #4caf50;">Parameters:</strong><br>
+                            • <strong>category:</strong> Channel category for tickets<br>
+                            • <strong>support_role:</strong> Role to ping for new tickets<br>
+                            • <strong>archive_channel:</strong> Where closed tickets go<br>
+                            • <strong>mention_support:</strong> Auto-mention support staff
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Logs Commands</h3>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>setlog</h3>
+                        <p>Configure the primary logging channel where the bot will send all server activity logs and important notifications.</p>
+                        <div class="command-usage">
+                            <pre><code>/setlog #channel</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(255, 193, 7, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #ffc107;">Note:</strong> Requires admini permissions
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Showlog Config</h3>
+                        <p>Display the current logging configuration for your server, including which events are being logged and where.</p>
+                        <div class="command-usage">
+                            <pre><code>/showlogconfig</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(33, 150, 243, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #2196f3;">Info:</strong> Shows all active log settings
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Logconfig</h3>
+                        <p>Interactive configuration menu to easily set up and customize all logging options for your server.</p>
+                        <div class="command-usage">
+                            <pre><code>/logconfig</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(156, 39, 176, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #9c27b0;">Features:</strong> Interactive setup wizard
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Utility Commands</h3>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>User Info</h3>
+                        <p>Get comprehensive information about any user in the server, including join date, roles, and activity status.</p>
+                        <div class="command-usage">
+                            <pre><code>/info @user</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(76, 175, 80, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #4caf50;">Shows:</strong> Avatar, roles, join date, account age
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Reaction Role</h3>
+                        <p>Set up reaction-based role assignment on any message. Users can react to get or remove roles automatically.</p>
+                        <div class="command-usage">
+                            <pre><code>/reactionrole message_id emoji @role</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(255, 193, 7, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #ffc107;">Tip:</strong> Right-click message → Copy ID to get message_id
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Mention User</h3>
+                        <p>Configure automatic user mentions when new channels are created, useful for notification systems.</p>
+                        <div class="command-usage">
+                            <pre><code>/mentionuser adduser @user</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(33, 150, 243, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #2196f3;">Usage:</strong> Automatically mentions users in new channels
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Voice Chat Commands</h3>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>Move</h3>
+                        <p>Move a specific user from their current voice channel to another voice or stage channel of your choice.</p>
+                        <div class="command-usage">
+                            <pre><code>/move @user #destination_channel</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(255, 87, 34, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #ff5722;">Requirement:</strong> User must be in a voice channel
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Moveall</h3>
+                        <p>Transfer all users from one voice or stage channel to another channel in bulk. Perfect for event management.</p>
+                        <div class="command-usage">
+                            <pre><code>/moveall #source_channel #destination_channel</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(156, 39, 176, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #9c27b0;">Effect:</strong> Moves all users from source to destination
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Moveall2</h3>
+                        <p>Move all currently connected voice and stage channel members to a single specified channel.</p>
+                        <div class="command-usage">
+                            <pre><code>/moveall2 #destination_channel</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(76, 175, 80, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #4caf50;">Scope:</strong> Affects all voice-connected users
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Help Commands</h3>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>Help</h3>
+                        <p>Display a comprehensive list of all available commands that regular users can access, with brief descriptions.</p>
+                        <div class="command-usage">
+                            <pre><code>/help</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(33, 150, 243, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #2196f3;">Access:</strong> Available to all server members
+                        </div>
+                    </div>
+                    <div class="command-card">
+                        <h3>Adminhelp</h3>
+                        <p>Special help command that shows administrative commands and advanced features reserved for server admin.</p>
+                        <div class="command-usage">
+                            <pre><code>/adminhelp</code></pre>
+                        </div>
+                        <div style="margin-top: 1rem; padding: 0.5rem; background: rgba(244, 67, 54, 0.1); border-radius: 6px; font-size: 0.9rem;">
+                            <strong style="color: #f44336;">Restricted:</strong> Admin permissions required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage-tips" style="background: linear-gradient(135deg, rgba(100, 181, 246, 0.1) 0%, rgba(74, 144, 226, 0.05) 100%);">
+            <h2>Usage Tips & Best Practices</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="background: rgba(42, 42, 42, 0.8); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: #64b5f6; margin-bottom: 1rem;">Permissions</h3>
+                    <p style="font-size: 0.95rem;">Ensure Kernel Bot has the necessary permissions for each command. Administrative commands require proper role hierarchy.</p>
+                </div>
+                <div style="background: rgba(42, 42, 42, 0.8); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: #64b5f6; margin-bottom: 1rem;">Performance</h3>
+                    <p style="font-size: 0.95rem;">Commands execute instantly. For bulk operations like moveall, there might be a slight delay to prevent rate limiting.</p>
+                </div>
+                <div style="background: rgba(42, 42, 42, 0.8); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <h3 style="color: #64b5f6; margin-bottom: 1rem;">Customization</h3>
+                    <p style="font-size: 0.95rem;">Many commands can be customized for your server's specific needs. Contact support for advanced configurations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="navigation">
+            <div style="text-align: center;">
+                <h2>Explore More</h2>
+                <p style="margin-bottom: 2rem; color: #b0b0b0;">Need more information or have questions?</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <a href="index.html" class="button">
+                        <span style="margin-right: 0.5rem;"></span>
+                        Back to Main Menu
+                    </a>
+                    <a href="Q&A.html" class="button">
+                        <span style="margin-right: 0.5rem;"></span>
+                        Questions & Answers
+                    </a>
+                    <a href="status.html" class="button">
+                        <span style="margin-right: 0.5rem;"></span>
+                        Bot Status
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://github.com/PickAngE" target="_blank">
+                <span style="margin-right: 0.5rem;"></span>
+                GitHub Page
+            </a>
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-operational {
+    background-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.status-degraded {
+    background-color: #ff9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.status-down {
+    background-color: #f44336;
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+/* Current Status Banner */
+.current-status-banner {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(102, 187, 106, 0.05) 100%);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.current-status-banner h2 {
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+.current-status-banner p {
+    margin: 0;
+    color: #d0d0d0;
+}
+
+.refresh-note {
+    background: rgba(33, 150, 243, 0.1);
+    border: 1px solid rgba(33, 150, 243, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #81c4ff;
+}
+
+/* Uptime Statistics */
+.uptime-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.uptime-card {
+    background: rgba(42, 42, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.uptime-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(100, 181, 246, 0.2);
+}
+
+.uptime-percentage {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 0.5rem;
+}
+
+.uptime-label {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #64b5f6;
+}
+
+/* System Components */
+.components-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.component-item {
+    background: rgba(42, 42, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.component-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.1);
+}
+
+/* Incidents Section */
+.section-description {
+    margin-bottom: 2rem;
+    color: #b0b0b0;
+}
+
+.incident-card {
+    background: rgba(42, 42, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.incident-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.incident-resolved {
+    border-left: 4px solid #4caf50;
+}
+
+.incident-ongoing {
+    border-left: 4px solid #f44336;
+}
+
+.incident-investigating {
+    border-left: 4px solid #ff9800;
+}
+
+.incident-date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.incident-title {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.incident-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.status-resolved {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+}
+
+.status-ongoing {
+    background: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+}
+
+.status-investigating {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+}
+
+.incident-details {
+    margin-top: 0.5rem;
+}
+
+.incident-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.incident-details p:last-child {
+    margin-bottom: 0;
+}
+
+.no-incidents {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 8px;
+}
+
+.no-incidents p {
+    color: #888;
+    margin: 0;
+}
+
+/* Performance Metrics */
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.performance-card {
+    background: rgba(42, 42, 42, 0.8);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.performance-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(100, 181, 246, 0.2);
+}
+
+.performance-card h3 {
+    color: #64b5f6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.performance-card .metric-value {
+    margin-bottom: 0.5rem;
+}
+
+.performance-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin: 0;
+}
+
+/* Navigation Section */
+.navigation-content {
+    text-align: center;
+}
+
+.navigation-content h2 {
+    margin-bottom: 1rem;
+}
+
+.navigation-content p {
+    margin-bottom: 2rem;
+    color: #b0b0b0;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive Design for Status Page */
+@media (max-width: 768px) {
+    .uptime-stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .uptime-card {
+        padding: 1rem;
+    }
+    
+    .uptime-percentage {
+        font-size: 1.5rem;
+    }
+    
+    .performance-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .performance-card {
+        padding: 1rem;
+    }
+    
+    .incident-card {
+        padding: 1rem;
+    }
+    
+    .incident-card:hover {
+        transform: translateX(3px);
+    }
+    
+    .component-item:hover {
+        transform: translateX(3px);
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navigation-buttons .button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .current-status-banner {
+        padding: 1rem;
+    }
+    
+    .current-status-banner h2 {
+        font-size: 1.3rem;
+    }
+    
+    .uptime-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+    
+    .incident-title {
+        font-size: 1rem;
+    }
+    
+    .refresh-note {
+        padding: 0.75rem;
+        font-size: 0.8rem;
+    }
+}
