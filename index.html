@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - My Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="navbar">
+      <div class="logo">Kernel</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home" class="nav-link active" data-target="home">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-target="about">About</a>
+          </li>
+          <li>
+            <a href="#kernel" class="nav-link" data-target="kernel"
+              >Kernel Bot</a
+            >
+          </li>
+          <li>
+            <a href="#docs" class="nav-link" data-target="docs"
+              >Documentation</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page-section">
+        <div class="hero">
+          <h1>Welcome to my space</h1>
+          <p>I am <span class="typing-text"></span></p>
+
+          <div class="gallery">
+            <a href="#about" class="card" data-target="about">
+              <div class="card-content">
+                <h3>Who am I?</h3>
+                <p>Discover my background and skills.</p>
+              </div>
+            </a>
+
+            <a href="#kernel" class="card" data-target="kernel">
+              <div class="card-content">
+                <h3>Kernel</h3>
+                <p>My Discord bot.</p>
+              </div>
+            </a>
+
+            <a href="#docs" class="card" data-target="docs">
+              <div class="card-content">
+                <h3>Documentation</h3>
+                <p>Kernel commands.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="page-section hidden">
+        <h1>About me</h1>
+        <div class="about-container">
+          <div class="about-text">
+            <p>
+              Hi! I'm a developer passionate about useful or useless projects, I
+              love automating tasks for video games.
+            </p>
+            <p>
+              I love spending time modifying my Kernel bot to add features or
+              commands.
+            </p>
+            <h3>My Skills</h3>
+            <ul>
+              <li>
+                HTML5, CSS3, JavaScript, Python, Node.js (discord.js), Rust
+              </li>
+              <li>Batch, WINGET, PowerShell, GIT</li>
+            </ul>
+          </div>
+          <div class="about-img">
+            <img src="images/About_Me_2.gif" alt="About Me" />
+          </div>
+        </div>
+      </section>
+
+      <section id="kernel" class="page-section hidden">
+        <div class="bot-header">
+          <h1>Kernel Bot</h1>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <h3>Fast</h3>
+            <p>Built with Node.js for instant responsiveness.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Moderation</h3>
+            <p>Complete tools for logs and automatic mutes.</p>
+          </div>
+          <div class="feature-box">
+            <h3>Ticket System</h3>
+            <p>A simple and effective ticket system.</p>
+          </div>
+        </div>
+
+        <div class="bot-history">
+          <h2>The History of Kernel</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="date">July 2025</span>
+                <h3>The Genesis</h3>
+                <p>
+                  Development started. The idea was to create a simple bot to
+                  moderate my own server.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="date">August 2025</span>
+                <h3>Version 2.0</h3>
+                <p>Bot redesign, more stable with fewer errors.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="date">November 2025</span>
+                <h3>Rework</h3>
+                <p>
+                  Complete bot redesign, new foundation, new architecture and
+                  more features.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="date">Future</span>
+                <h3>What's Coming</h3>
+                <p>More features, more innovations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="docs" class="page-section hidden">
+        <div class="bot-header">
+          <h1>Kernel Bot Documentation</h1>
+          <p style="color: var(--text-muted); margin-top: 0.5rem">
+            Discover all commands and features of Kernel Bot (Not up to date)
+          </p>
+        </div>
+
+        <div class="docs-category">
+          <h2><i class="fas fa-user-shield"></i> Admin Only Commands</h2>
+          <div class="features-grid">
+            <div class="feature-box">
+              <h3>/alt</h3>
+              <p><strong>Description:</strong> Manages alternative accounts.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/alt-action-config</h3>
+              <p>
+                <strong>Description:</strong> Configure automatic actions for
+                known alt accounts joining.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/antiinvite</h3>
+              <p>
+                <strong>Description:</strong> Configure the Anti-Invite system.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/clear</h3>
+              <p>
+                <strong>Description:</strong> Deletes a specified number of
+                messages from the current channel.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/delwarn</h3>
+              <p>
+                <strong>Description:</strong> Deletes a specific warning by its
+                case ID.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/giveaway</h3>
+              <p><strong>Description:</strong> Manage giveaways.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/greetings</h3>
+              <p>
+                <strong>Description:</strong> Configure welcome and leaving
+                messages.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/history</h3>
+              <p>
+                <strong>Description:</strong> The user to view the history of.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/invite</h3>
+              <p>
+                <strong>Description:</strong> Manages the invite tracking
+                system.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/lock</h3>
+              <p>
+                <strong>Description:</strong> Locks the current channel,
+                preventing members from sending messages.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/logconfig</h3>
+              <p>
+                <strong>Description:</strong> Configure server logs or set the
+                log retention time.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/move</h3>
+              <p>
+                <strong>Description:</strong> Moves a user to another voice or
+                stage channel.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/moveall</h3>
+              <p>
+                <strong>Description:</strong> Moves all connected voice/stage
+                members to the specified channel.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/movefrom</h3>
+              <p>
+                <strong>Description:</strong> Moves all users from one
+                voice/stage channel to another.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/mute</h3>
+              <p>
+                <strong>Description:</strong> Mutes a user for a specified
+                duration.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/poll</h3>
+              <p><strong>Description:</strong> Manage polls.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/purgeuser</h3>
+              <p>
+                <strong>Description:</strong> Deletes a specific number of
+                messages from a targeted user in this channel.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/reactionrole</h3>
+              <p>
+                <strong>Description:</strong> Sets up a reaction role on a
+                message.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/reason</h3>
+              <p>
+                <strong>Description:</strong> Updates the reason for an existing
+                moderation case.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/setlog</h3>
+              <p>
+                <strong>Description:</strong> The channel where logs will be
+                sent.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/showlogconfig</h3>
+              <p>
+                <strong>Description:</strong> Here is how logs are currently
+                configured on this server.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/slowmode</h3>
+              <p>
+                <strong>Description:</strong> Set the slowmode for the current
+                channel.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/ticket</h3>
+              <p><strong>Description:</strong> Manages the ticket system.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/timer</h3>
+              <p><strong>Description:</strong> Manages timers.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/unlock</h3>
+              <p>
+                <strong>Description:</strong> Unlocks the current channel,
+                allowing members to send messages.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/unmute</h3>
+              <p><strong>Description:</strong> Unmutes a user.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/warn</h3>
+              <p><strong>Description:</strong> Warns a user.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/warnconfig</h3>
+              <p>
+                <strong>Description:</strong> Configures the warning system.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/adminhelp</h3>
+              <p><strong>Description:</strong> Displays all admin commands.</p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+            <div class="feature-box">
+              <h3>/help</h3>
+              <p>
+                <strong>Description:</strong> Displays all available commands.
+              </p>
+              <p><strong>Permissions:</strong> Admin</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="docs-category">
+          <h2>
+            <i class="fas fa-users"></i> Non-Admin Commands (Normal Users)
+          </h2>
+          <div class="features-grid">
+            <div class="feature-box">
+              <h3>/infos</h3>
+              <p>
+                <strong>Description:</strong> Displays all public information
+                for a user (via mention)
+              </p>
+              <p><strong>Permissions:</strong> None</p>
+            </div>
+            <div class="feature-box">
+              <h3>/help</h3>
+              <p><strong>Description:</strong> Displays available commands.</p>
+              <p><strong>Permissions:</strong> None</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="docs-category">
+          <h2><i class="fas fa-rocket"></i> Quick Start Guide</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>1. Invite the Bot</h3>
+                <p>
+                  Add Kernel Bot to your Discord server with the necessary
+                  permissions.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>2. Initial Setup</h3>
+                <p>
+                  Use <code>/adminhelp</code> to see all available configuration
+                  commands.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>3. Configure Logs</h3>
+                <p>
+                  Use <code>/logconfig #your-channel</code> to enable moderation
+                  logs.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>4. Customize Messages</h3>
+                <p>
+                  Configure welcome messages with <code>/welcome</code> and
+                  leaving messages with <code>/leaving</code>.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>5. Enable Tickets</h3>
+                <p>
+                  Configure the ticket system with <code>/ticket setup</code>.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>6. Your Turn</h3>
+                <p>
+                  Once configured, you can now use the commands to manage your
+                  server.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="docs-category">
+          <h2><i class="fas fa-info-circle"></i> Important Information</h2>
+          <div class="about-container" style="margin-top: 20px">
+            <div class="about-text">
+              <h3>Security and Validation</h3>
+              <p style="color: var(--text-muted); margin-bottom: 15px">
+                Kernel Bot integrates advanced security measures:
+              </p>
+              <ul style="list-style: disc; margin-left: 20px">
+                <li>User input validation</li>
+                <li>Rate limiting per command</li>
+                <li>Permission verification before execution</li>
+                <li>Secure error messages</li>
+              </ul>
+            </div>
+            <div class="about-text">
+              <h3>Support and Updates</h3>
+              <p style="color: var(--text-muted); margin-bottom: 15px">
+                The bot is regularly updated with new features and bug fixes.
+              </p>
+              <ul style="list-style: disc; margin-left: 20px">
+                <li>Per-server database</li>
+                <li>Crash reporting directly the dev team</li>
+                <li>Regular updates</li>
+                <li>Modular architecture</li>
+                <li>Compatible Discord.js v14</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 My Portfolio & Kernel Bot.</p>
+    </footer>
+
+    <div class="music-player">
+      <div class="player-controls">
+        <button id="prev-btn" class="control-btn" title="Previous">
+          <i class="fas fa-step-backward"></i>
+        </button>
+        <button id="play-btn" class="control-btn" title="Play/Pause">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next-btn" class="control-btn" title="Next">
+          <i class="fas fa-step-forward"></i>
+        </button>
+        <button id="playlist-btn" class="control-btn" title="Playlist">
+          <i class="fas fa-list"></i>
+        </button>
+        <div id="playlist-menu" class="hidden">
+          <div class="playlist-header">Playlist</div>
+          <ul id="track-list"></ul>
+        </div>
+        <div class="volume-container">
+          <i class="fas fa-volume-down volume-icon"></i>
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.2"
+          />
+        </div>
+        <button id="minimize-btn" class="control-btn" title="Minimize/Maximize">
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="song-info">
+        <span class="song-label">Now Playing</span>
+        <div class="song-name-container">
+          <span id="current-song">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="music.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
